@@ -38,7 +38,7 @@ class EstudiantesController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+       
     }
 
     public function destroy($id)
@@ -65,10 +65,11 @@ class EstudiantesController extends Controller
         //dd($request->nombre);
         $user = User::find(Auth::User()->id);
         $cursos = Curso::All();
+
         
         //toma el nombre del curso y lo asocia a su codigo 
         foreach($cursos as $curso){
-            if($request->nombre == $curso->nombre){
+            if($request->nombre == $curso->nombre ){
                 $laid= $curso->id;
             }
         }

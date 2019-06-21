@@ -33,6 +33,10 @@
         <input type="text" name="estado" class="form-control" placeholder="estado" required>
     </div>
 
+    <div class="form-group">
+        <label for="estado">motivo</label>
+        <input type="text" name="motivo" class="form-control" placeholder="motivo" required>
+    </div>
 
     <div class="form-group">
         <button type="submit">Registrar</button>

@@ -26,6 +26,7 @@
           <th>Código</th>
           <th>Curso</th>
           <th>Creditos</th>
+          <th>Motivo</th>
           <th>Estado</th>
           <th>Editar</th>>
           <th></th>
@@ -38,6 +39,7 @@
               <td>{{$muestracurso->curso->codigo }}</td>
               <td>{{$muestracurso->curso->nombre }}</td>
               <td>{{$muestracurso->curso->creditos }}</td>   
+              <td>{{$muestracurso->curso->motivo}}</td>
               <td>{{$muestracurso->estado }}</td> 
               <td>
                   <!-- MODAL-->

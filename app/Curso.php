@@ -13,7 +13,8 @@ class Curso extends Model
     	'nombre',
     	'creditos',
     	'semestre',
-    	'seccion',
+        'seccion',
+        'motivo',
     ];
 
 

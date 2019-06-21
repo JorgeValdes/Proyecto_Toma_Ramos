@@ -25,6 +25,7 @@
           <th>Código</th>
           <th>Curso</th>
           <th>Creditos</th>
+          <th>Motivo</th>
           <th>Estado</th>
           <th>Eliminar</th>>
           <th></th>
@@ -35,8 +36,10 @@
               <td>{{ $tomarcurso->id }}</td>
               <td>{{ $tomarcurso->curso->codigo }}</td>
               <td>{{ $tomarcurso->curso->nombre }}</td>
-              <td>{{ $tomarcurso->curso->creditos }}</td>   
+              <td>{{ $tomarcurso->curso->creditos }}</td>  
+              <td>{{ $tomarcurso->curso->motivo}} </td> 
               <td>{{ $tomarcurso->estado }}</td> 
+              
               <td><a href="{{route('tomacurso.destroy', $tomarcurso->id)}}" class="btn btn red"> eliminar</a></td>
             </tr>      
           @endforeach
@@ -65,6 +68,21 @@
                   </select>
                 </div>
 
+                <div class="input-field col s12">
+                  <select> 
+                    <option {{ $curso->motivo}}</option>
+                    <option value="sin_prerequisito">sin_prerequisito</option>
+                    <option value="con_prerequisito">con_prerequisito</option>
+                    <option value="no lo inscribi">no lo inscribi</option>
+                    <option value="aumento de creditos">aumento de creditos</option>
+                  </select>
+                  <label>Materialize Select</label>
+                </div>
+
+
+
+
+
                 <button class="btn btn-info" type="submit">Añadir</button>
              </form>
            </div>
@@ -90,4 +108,14 @@
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
   });
+
 </script>
+
+<script>
+    document.addEventListener('h', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
+
+</script>
+

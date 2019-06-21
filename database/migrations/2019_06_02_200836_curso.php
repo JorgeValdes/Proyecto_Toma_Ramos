@@ -18,8 +18,9 @@ class Curso extends Migration
             $table->string('codigo');
             $table->string('nombre');
             $table->integer('creditos');
-            $table->enum('seccion',['seccion 1','seccion 2'])->default('seccion 1');
+            $table->enum('seccion',['seccion 1','seccion 2'])->default('seccion 1');   
             $table->integer('semestre');
+            $table->enum('motivo',['sin_prerequisito','con_prerequisito','no lo inscribi', 'aumento de creditos']);
             $table->rememberToken();
             $table->timestamps();
         });

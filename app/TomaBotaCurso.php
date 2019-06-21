@@ -12,7 +12,8 @@ class TomaBotaCurso extends Model
 		'id',
     	'user_id',
     	'curso_id',
-    	'estado',
+		'estado',
+		
 	];  
 
 	public function user()
