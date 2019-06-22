@@ -72,10 +72,10 @@
                   <select name="motivo"> 
                     <option {{ $curso->motivo}}</option>
                   
-                    <option value="sin_prerequisito">sin_prerequisito</option>
-                    <option value="con_prerequisito">con_prerequisito</option>
-                    <option value="no lo inscribi">no lo inscribi</option>
-                    <option value="aumento de creditos">aumento de creditos</option>
+                    <option value="sin_prerequisito">Sin Prerequisito</option>
+                    <option value="con_prerequisito">Con Prerequisito</option>
+                    <option value="no lo inscribi">No Inscripcion</option>
+                    <option value="aumento de creditos">Aumento de Credito</option>
                   </select>
                   <label>Materialize Select</label>
                 </div>
