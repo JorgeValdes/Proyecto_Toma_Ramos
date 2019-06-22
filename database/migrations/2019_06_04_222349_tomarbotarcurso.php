@@ -17,6 +17,7 @@ class Tomarbotarcurso extends Migration
             $table->Increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('curso_id')->unsigned();
+            $table->enum('motivo',['sin_prerequisito','con_prerequisito','no lo inscribi', 'aumento de creditos']);
             $table->enum('estado',['pendiente','aceptado','rechazado'])->default('pendiente');
             $table->rememberToken();
             $table->timestamps();

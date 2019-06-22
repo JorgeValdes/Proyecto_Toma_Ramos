@@ -38,7 +38,8 @@
               <td>{{$muestracurso->user->nombres}}</td>
               <td>{{$muestracurso->curso->codigo }}</td>
               <td>{{$muestracurso->curso->nombre }}</td>
-              <td>{{$muestracurso->curso->creditos }}</td>  
+              <td>{{$muestracurso->curso->creditos }}</td> 
+              <td>{{$muestracurso->motivo}}</td> 
               <td>{{$muestracurso->curso->motivo}}</td> 
               <td>{{$muestracurso->estado }}</td> 
               <td>

@@ -37,7 +37,7 @@
               <td>{{ $tomarcurso->curso->codigo }}</td>
               <td>{{ $tomarcurso->curso->nombre }}</td>
               <td>{{ $tomarcurso->curso->creditos }}</td>  
-              <td>{{ $tomarcurso->curso->motivo}} </td> 
+              <td>{{ $tomarcurso->motivo}}
               <td>{{ $tomarcurso->estado }}</td> 
               
               <td><a href="{{route('tomacurso.destroy', $tomarcurso->id)}}" class="btn btn red"> eliminar</a></td>
@@ -69,9 +69,9 @@
                 </div>
 
                 <div class="input-field col s12">
-                  <select> 
+                  <select name="motivo"> 
                     <option {{ $curso->motivo}}</option>
-                  <select name="motivo">
+                  
                     <option value="sin_prerequisito">sin_prerequisito</option>
                     <option value="con_prerequisito">con_prerequisito</option>
                     <option value="no lo inscribi">no lo inscribi</option>

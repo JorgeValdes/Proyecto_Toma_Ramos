@@ -103,7 +103,7 @@ class EstudiantesController extends Controller
         $tomacurso = new TomarCurso();
         $tomacurso->user_id = $user->id;
         $tomacurso->curso_id = $laid;
-        $tomacuros->motivo= $request->motivo;
+        $tomacurso->motivo = $request->motivo;
         $tomacurso->save();
         return redirect()->route('usuario.toma');
     }   
