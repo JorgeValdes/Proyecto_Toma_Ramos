@@ -82,6 +82,7 @@
   
 @endsection
 
+@section('script')
 <script>
     document.addEventListener('DOMContentLoaded', function() {
 
@@ -98,3 +99,4 @@
   });
 
 </script>
+@endsection

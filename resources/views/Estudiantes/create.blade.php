@@ -48,8 +48,16 @@
 {{-- Agregamos los scripts para todos los elementos que utilicen JQuery al final para ayudar en tiempos de carga --}}
 @section('scripts')
   <script src={{ asset('js/nav_scripts.js') }}></script>
+
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
   <script>
+  
     $('#flash-overlay-modal').modal();
 </script>
   
+
+
 @endsection
+
+

@@ -19,7 +19,6 @@
 <div class="center">
 <a href="{{route('directorToma.index')}}" class="waves-effect waves-light btn-large"><i class="material-icons left"></i>Lista solicitudes </a>
 <a href="{{route('directorTomaBota.index')}}" class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Lista botar</a>
-<a href="{{route('directorTomaBota.index')}}" class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Indices de Interes</a>
 </div>
 
 <br>

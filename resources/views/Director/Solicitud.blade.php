@@ -28,7 +28,7 @@
           <th>Creditos</th>
           <th>Motivo</th>
           <th>Estado</th>
-          <th>Editar</th>>
+          <th>Editar</th>
           <th></th>
         </thead>
         <tbody>
@@ -80,8 +80,12 @@
       </center>
 </div>
 
-  
+
 @endsection
+
+@section('scripts')
+
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -98,4 +102,4 @@
     var instances = M.FormSelect.init(elems);
   });
 
-</script>
+ </script>
