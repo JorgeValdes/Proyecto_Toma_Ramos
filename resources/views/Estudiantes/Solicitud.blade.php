@@ -83,7 +83,7 @@
 
 
 
-                <button class="btn btn-info" onclick="M.toast({html: 'Curso añadido exitosamente', displayLenght: 4000})" type="submit">Añadir</button>
+                <button class="btn btn-info" type="submit">Añadir</button>
              </form>
            </div>
          </div>
@@ -117,11 +117,5 @@
     var instances = M.FormSelect.init(elems);
   });
 
-</script>
-
-<script>
-  var toastElement = document.querySelector('.toast');
-  var toastInstance = M.Toast.getInstance(toastElement);
-  toastInstance.dismiss();
 </script>
 
