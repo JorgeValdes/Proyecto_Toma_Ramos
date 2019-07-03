@@ -83,7 +83,7 @@
 
 
 
-                <button class="btn btn-info" type="submit">Añadir</button>
+                <button class="btn btn-info" onclick="M.toast({html: 'solicitud enviada exitosamente', displayLenght: 4000})" type="submit">Añadir</button>
              </form>
            </div>
          </div>
