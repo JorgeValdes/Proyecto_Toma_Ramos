@@ -62,7 +62,7 @@
                               <option value="rechazado">rechazado</option>
                             </select>
                           </div>
-                        <button class="btn btn-info" type="submit">Editar</button>
+                        <button class="btn btn-info" onclick="M.toast({html: 'estado editado exitosamente', displayLenght: 4000})" type="submit">Editar</button>
                       </form>
 
                     </div>
