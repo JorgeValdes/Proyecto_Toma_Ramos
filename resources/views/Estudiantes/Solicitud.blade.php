@@ -40,7 +40,7 @@
               <td>{{ $tomarcurso->motivo}}
               <td>{{ $tomarcurso->estado }}</td> 
               
-              <td><a href="{{route('tomacurso.destroy', $tomarcurso->id)}}" onclick="M.toast({html: 'Curso eliminado exitosamente', displayLenght: 4000})" class="btn btn red"> eliminar</a></td>
+              <td><a href="{{route('tomacurso.destroy', $tomarcurso->id)}}" class="btn btn red"> eliminar</a></td>
             </tr>      
           @endforeach
         </tbody>
