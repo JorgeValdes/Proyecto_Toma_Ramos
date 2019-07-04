@@ -18,7 +18,7 @@ Auth::routes();
 Route::get('/', function () {return view('home');});
 Route::get('/home', 'HomeController@index')->name('home');
 
-#Cambiar foto#
+#Cambiar foto
 Route::patch('/home/perfil/cambio_foto', 'HomeController@cambiar_foto');
 
 #Estudiantes#
