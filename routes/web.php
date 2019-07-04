@@ -68,9 +68,11 @@ Route::get('botacurso{id}/destroy',[
 
 
 //----------- DIRECTOR------------------------------
-Route::get('/decisionTomaD',function(){
+/*Route::get('/decisionTomaD',function(){
 	return view('Director.principal2');
 })->name('toma.decisionToma2');
+*/
+Route::get('/decisionTomaD','DirectorController@solicitudGrafico')->name('toma.decisionToma2');
 //---solicitudes de tomar ramos-------
 Route::get('/directorToma','DirectorController@tomaIndex')->name('director.toma');
 Route::put('/directorEdita/{id}','DirectorController@tomaEdit')->name('director.edita');

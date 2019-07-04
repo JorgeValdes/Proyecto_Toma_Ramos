@@ -48,7 +48,7 @@ class DirectorController extends Controller
 
     // -----------------------FUNCIONES DE TOMA DE RAMOS---------------------
 
-    public function tomaIndex()
+     public function tomaIndex()
     {
         $muestracursos = TomarCurso::All();
         return view('Director.Solicitud')->with('muestracursos',$muestracursos);
@@ -76,4 +76,13 @@ class DirectorController extends Controller
         return redirect()->route('director.bota');
     }
 
+    public function solicitudGrafico()
+    {
+        $solicitudes=[
+            'pendientes' => TomarCurso::where('estado','pendiente')->count(),
+            'aceptados' => TomarCurso::where('estado','aceptado')->count(),
+            'rechazados' => TomarCurso::where('estado','rechazado')->count()
+        ];
+        return view('Director.principal2',$solicitudes);
+    }
 }
