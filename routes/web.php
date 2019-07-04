@@ -30,7 +30,7 @@ Route::get('/profesor', 'ProfesoresController@index')->name('profesor');
 #Director#
 Route::get('/director', 'DirectorController@index')->name('director');
 
-#Secretaria##
+#Secretaria#
 Route::get('/secretaria', 'SecretariaController@index')->name('secretaria');
 
 #Empresa#
