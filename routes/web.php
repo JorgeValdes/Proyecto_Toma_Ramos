@@ -24,13 +24,13 @@ Route::patch('/home/perfil/cambio_foto', 'HomeController@cambiar_foto');
 #Estudiantes#
 Route::get('/estudiante', 'EstudiantesController@index')->name('estudiante');
 
-#Profesores
+#Profesores#
 Route::get('/profesor', 'ProfesoresController@index')->name('profesor');
 
 #Director#
 Route::get('/director', 'DirectorController@index')->name('director');
 
-#Secretaria#
+#Secretaria##
 Route::get('/secretaria', 'SecretariaController@index')->name('secretaria');
 
 #Empresa#
