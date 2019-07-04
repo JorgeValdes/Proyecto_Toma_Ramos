@@ -24,7 +24,7 @@
             @csrf
           </form>
         @else
-          <li><b><a class="modal-trigger blue darken-2" href="{{route('login')}}">Iniciar sesión</a></b></li>
+          <li><b><a class="modal-trigger blue darken-2" href="#modal1">Iniciar sesión</a></b></li>
         @endauth
       @endif
     </ul>
@@ -85,9 +85,41 @@
   </li>
 </ul>
 
+
+<div id="modal1" class="modal"> 
+  <div class="modal-content">
+    <form action="{{ route('login') }}" id="form_id" method="POST">
+      @csrf
+      {{-- Entrada de rut --}}
+      <div class="form-group row">
+        <div class="col-md-6">
+          <label for="rut">Rut</label> 
+            <input id="rut" type="text" class="form-control{{ $errors->has('rut') ? ' is-invalid' : '' }}" name="rut"  required autofocus>
+          </div>
+        </div>
+        {{-- Entrada de contraseña --}}
+        <div class="form-group row">
+          <div class="col-md-6">
+            <label for="password">Contraseña</label> 
+            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password"  required>
+          </div>
+        </div>
+        {{-- Botón submit --}}
+        <button type="submit" class='btn waves-effect waves-light'>Iniciar sesión
+          <i class="material-icons right">send</i>
+        </button>  
+    </form>
+  </div>
+</div> 
 {{-- Login Form --}}
 @include ('layout.login_modal')
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+</script>
 {{-- Photo Form --}}
 @include ('layout.photo_modal')
 
