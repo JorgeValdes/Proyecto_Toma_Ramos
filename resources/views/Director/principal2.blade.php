@@ -19,6 +19,7 @@
 <div class="center">
 <a href="{{route('director.toma')}}" class="waves-effect waves-light btn-large"><i class="material-icons left"></i>Lista solicitudes </a>
 <a href="{{route('director.bota')}}" class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Lista botar</a>
+<a href="{{route('director.cursos')}}" class="waves-effect waves-light btn-large"><i class="material-icons right"></i>CURSOS</a>
 <div align="center" style="margin-top: 30px">
 	<div style="width: 500px; height: 500px">
 	<canvas id="myChart" width="400" height="400"></canvas>
