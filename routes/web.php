@@ -80,4 +80,11 @@ Route::put('/directorEdita/{id}','DirectorController@tomaEdit')->name('director.
 Route::get('/directorTomaBota','DirectorController@botaIndex')->name('director.bota');
 Route::put('/directorEditaBota/{id}','DirectorController@botaEdit')->name('director.botaedita');
 
+//---crud manejo de ramos---
+Route::get('/directorRamos','DirectorController@ramoIndex')->name('director.cursos');
+
+Route::get('botaramo{id}/destroy','DirectorController@ramoDestroy')->name('director.cursodestroy');
+Route::post('/cursoguardado','DirectorController@modal')->name('curso.guardado');
+
+
 #-----------------------------FIN RUTAS DE TOMA DE RAMOS----------------------------------------#
