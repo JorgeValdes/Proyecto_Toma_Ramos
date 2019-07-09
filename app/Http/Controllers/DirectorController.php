@@ -85,4 +85,26 @@ class DirectorController extends Controller
         ];
         return view('Director.principal2',$solicitudes);
     }
+ //funciones nuevas
+    public function ramoIndex()
+    {
+        $muestracursos = Curso::all();
+        return view('Director.curso')->with('muestracursos',$muestracursos);
+    }
+    public function ramoDestroy($id)
+    {
+        $curso = Curso::find($id);
+        $curso->delete();
+        return redirect()->route('director.cursos');
+    }
+    public function modal(Request $request){
+        
+        $curso = new Curso();
+        $curso->codigo = $request->codigo;
+        $curso->nombre = $request->nombre;
+        $curso->creditos = $request->creditos;
+        $curso->semestre = $request->semestre;
+        $curso->save();
+        return redirect()->route('director.cursos');
+    } 
 }
