@@ -86,5 +86,6 @@ Route::get('/directorRamos','DirectorController@ramoIndex')->name('director.curs
 Route::get('botaramo{id}/destroy','DirectorController@ramoDestroy')->name('director.cursodestroy');
 Route::post('/cursoguardado','DirectorController@modal')->name('curso.guardado');
 
+Route::put('/editarcurso/{id}', 'DirectorController@ramoEditar')->name('director.editaRamo');
 
 #-----------------------------FIN RUTAS DE TOMA DE RAMOS----------------------------------------#

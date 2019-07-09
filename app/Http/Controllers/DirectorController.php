@@ -99,6 +99,23 @@ class DirectorController extends Controller
     }
     public function modal(Request $request){
         
+        //funcion para que no se agreguen dos cursos iguales
+        $cursosExistentes = Curso::All();
+
+        foreach($cursosExistentes as $cursosExistente){
+            
+            if($cursosExistente->nombre == $request->nombre){
+                // no se puede agregar el curso
+                
+                return redirect()->route('director.cursos');
+            }
+            if($cursosExistente->codigo == $request->codigo){
+                // no se puede agregar el curso
+                return redirect()->route('director.cursos'); 
+            }
+
+
+        }
         $curso = new Curso();
         $curso->codigo = $request->codigo;
         $curso->nombre = $request->nombre;
@@ -107,4 +124,28 @@ class DirectorController extends Controller
         $curso->save();
         return redirect()->route('director.cursos');
     } 
+
+    //función para editar la creación del curso
+    public function ramoEditar(Request $request, $id ){
+        $curso = Curso::find($id);
+        $cursosExistentes = Curso::All();
+        foreach($cursosExistentes as $cursosExistente){
+            if($cursosExistente->nombre == $request->nombre){
+                return redirect()->route('director.cursos');
+            }
+    
+            if($cursosExistente->codigo == $request->codigo){
+                return redirect()->route('director.cursos');
+            }
+        }
+
+        $curso->codigo = $request->codigo;
+        $curso->nombre = $request->nombre;
+        $curso->creditos = $request->creditos;
+        $curso->semestre = $request->semestre;
+        $curso->save();
+        return redirect()->route('director.cursos');
+    }
+
+    //-------------------------FIN FUNCIONES TOMA DE RAMOS---------------------
 }

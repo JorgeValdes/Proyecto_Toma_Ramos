@@ -68,6 +68,9 @@
     });
 </script>
 
+<div class = "center">
+	<a href ="{{route('director')}}" class = "btn btn"> principal</a>
+</div>
 
 @endsection
 
